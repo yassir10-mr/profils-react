@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.cards-container {
+  display: flex; /* Permet d'afficher les cartes en ligne */
+  gap: 20px; /* Ajoute de l'espace entre les cartes */
+  justify-content: center; /* Centre les cartes horizontalement */
+  padding: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  width: 250px; /* Largeur de chaque carte */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden; /* Cache les débordements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: transform 0.3s, box-shadow 0.3s; /* Effet d'animation */
+  background-color: white;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Soulève la carte au survol */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.card-image {
+  width: 100%; /* Image prend toute la largeur */
+  height: 150px; /* Hauteur fixe pour l'image */
+  object-fit: cover; /* Coupe l'image pour remplir */
+  border-bottom: 1px solid #ccc; /* Séparation entre l'image et le contenu */
+}
+
+.card-info {
+  padding: 15px; /* Espacement interne */
+  text-align: center; /* Centre le texte */
+}
+
+.card-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #333;
+}
+
+.card-age,
+.card-profession {
+  font-size: 0.9em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.card-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Bleu */
+  color: white;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.card-button:hover {
+  background-color: #0056b3; /* Bleu plus foncé au survol */
 }
